@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercício 005 - DOM</title>
+    <style>
+      body {
+        background-color: rgb(35, 66, 102);
+        color: white;
+        font: normal 18pt Arial, Helvetica, sans-serif;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Iniciando estudos com DOM</h1>
+    <p>Aqui vai o resultado do exercício 005</p>
+    <p> Aprenda a manipular o <strong>DOM</strong> usando JavaScript</p>
+    <div id="msg"> Clique em mim </div>
+
+    <script>
+      var p = window.document.getElementsByTagName("p")[1];
+      document.write("O texto dos parágrafo: " + p.innerText);
+
+    /*
+      var d = document.getElementById("msg");
+      d.style.backgroundColor = "green";
+      // d.innerText = "Obrigado por clicar!";
+    */
+
+    /*
+        var d = document.getElementsByName("msg")[0];
+        d.style.backgroundColor = "blue";
+    */
+
+    // podemos usar o className para pegar um elemento também!
+
+    /*
+    var d = document.querySelector("#msg");
+    d.style.backgroundColor = "green";
+    */
+    </script>
+    
+    
+  </body>
+</html>

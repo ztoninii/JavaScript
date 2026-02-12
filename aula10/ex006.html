@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 006 - Eventos DOM</title>
+    <style>
+        #area {
+
+            width: 300px;
+            height: 200px;
+            background-color: green;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font: normal 20pt Arial, sans-serif;
+            cursor: pointer;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div id="area""> 
+        Interaja comigo!
+    </div>
+
+
+    <script> 
+        var a = document.getElementById("area");
+
+        a.addEventListener('click', clicar);
+        a.addEventListener('mouseenter', entrar);
+        a.addEventListener('mouseout', sair);
+
+        function clicar() {
+           a.style.background = 'blue'; 
+           a.innerText = 'Clicou!'; 
+        }
+
+        function entrar() {
+            a.style.background = 'red'; 
+            a.innerText = 'Entrou com o mouse!'; 
+        }
+
+        function sair() {
+            a.style.background = 'green'; 
+            a.innerText = 'Saiu com o mouse!'; 
+        }
+    </script>
+</body>
+</html>

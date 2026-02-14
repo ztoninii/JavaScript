@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aula 11 - DETRAN</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+      }
+
+    .velocidade {
+        margin-bottom: 10px;
+        font-size: 20px;
+    }
+    </style>
+  </head>
+  <body>
+    <h1>Sistema de Multas</h1>
+    <p class="velocidade"> Velocidade do carro: <input type="number" name="txtvel" id="txtvel" placeholder="Digite sua velocidade" /> Km/h</p>
+    <input type="button" value="Verificar" onclick="calcular()">
+    <div id="resultado"></div>
+
+
+    <script>
+      var txtv = document.getElementById('txtvel')
+
+      function calcular(){
+        var txtv = document.getElementById('txtvel')
+        var resultado = document.getElementById('resultado')
+        var vel= Number(txtv.value)
+
+        resultado.innerHTML = `<p>A velocidade do seu carro é <strong>${vel} Km/h</strong></p>`
+        if (vel > 60) {
+            resultado.innerHTML += '<p>Você ultrapassou a velocidade permitida. <strong>Multa aplicada!</strong></p>'
+        }
+        resultado.innerHTML += '<p>Dirija sempre usando cinto de segurança!</p>'
+      }
+    </script>
+  </body>
+</html>

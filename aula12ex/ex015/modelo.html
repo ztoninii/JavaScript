@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modelo de Ex - Verificador de Idade</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Verificador de Idade</h1>
+    </header>
+
+    <section>
+        <div>
+            <p> Ano de nascimento: <input type="text"id="txtano" maxlength="4" pattern="[0-9]{4}" placeholder="Ano">
+            </p>
+            <p>
+                Sexo: 
+                <input type="radio" name="radsex" id="masc" value="masc"> Masculino 
+                <input type="radio" name="radsex" id="fem" value="fem"> Feminino
+            </p>
+            <p>
+                <input type="button" value="Verificar"  onclick="verificar()">
+            </p>    
+        </div>
+
+        <div id="res">
+            Preencha os dados acima e clique no botão Verificar para saber a idade e o gênero correspondente.
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 - Todos os direitos reservados.</p>
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html>

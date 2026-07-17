@@ -7,13 +7,11 @@ function tabuada() {
        let n = Number(num.value)
        let c = 1
        tab.innerHTML = '' // limpar a tabuada antes de gerar uma nova
-       while (c <= 10) {
+       for (c = 1; c <= 10; c++) {
          let item = document.createElement('option')
-         item.text = '${n} x ${c} = ${n * c}'
-         item.value = 'tab${c}' // atribuindo um valor para cada item da tabuada
-         tab.appendChild(item)
-         c++
+         item.text = `${n} x ${c} = ${n * c}`
+         item.value = `tab${c}` // atribuindo um valor para cada item da tabuada
+         tab.appendChild(item) // adicionando o item à lista
        }
-
     }
 }
